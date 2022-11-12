@@ -1,6 +1,6 @@
 package com.corhuila.sistemas.service;
 
-import com.corhuila.sistemas.entity.Ciudades;
+import com.corhuila.sistemas.entity.Municipios;
 import com.corhuila.sistemas.irepository.ICiudades;
 import com.corhuila.sistemas.iservice.ICiudadesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,18 +17,18 @@ public class CiudadesService implements ICiudadesService {
     private ICiudades repository;
 
     @Override
-    public List<Ciudades> all() {
+    public List<Municipios> all() {
         return this.repository.findAll();
     }
 
     @Override
-    public Optional<Ciudades> findById(Long id) {
+    public Optional<Municipios> findById(Long id) {
         return this.repository.findById(id);
     }
 
     @Override
-    public Ciudades save(Ciudades ciudades) {
-        return this.repository.save(ciudades);
+    public Municipios save(Municipios municipios) {
+        return this.repository.save(municipios);
     }
 
     @Override

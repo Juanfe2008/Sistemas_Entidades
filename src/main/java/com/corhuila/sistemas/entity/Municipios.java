@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "ciudades")
-public class Ciudades implements Serializable {
+@Table(name = "municipios")
+public class Municipios implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

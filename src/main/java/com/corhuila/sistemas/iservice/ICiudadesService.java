@@ -1,16 +1,16 @@
 package com.corhuila.sistemas.iservice;
 
-import com.corhuila.sistemas.entity.Ciudades;
+import com.corhuila.sistemas.entity.Municipios;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface ICiudadesService {
-    public List<Ciudades> all();
+    public List<Municipios> all();
 
-    public Optional<Ciudades> findById(Long id);
+    public Optional<Municipios> findById(Long id);
 
-    public Ciudades save(Ciudades ciudades);
+    public Municipios save(Municipios municipios);
 
     public void delete(Long id);
 }

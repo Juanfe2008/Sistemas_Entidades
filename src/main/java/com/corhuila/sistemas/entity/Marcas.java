@@ -1,9 +1,6 @@
 package com.corhuila.sistemas.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,8 +11,7 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Departamentos implements Serializable {
-
+public class Marcas implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -26,15 +22,10 @@ public class Departamentos implements Serializable {
     @Column(name = "codigo", nullable = false)
     private String codigo;
 
-    @Column(name = "nombre", nullable = false)
-    private String nombre;
+    @Column(name = "descripcion", nullable = false)
+    private String descripcion;
 
     @Column(name = "estado", nullable = false)
     private Boolean estado;
-
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "pais_id", nullable = false)
-    private Paises paisId;
-
 
 }
