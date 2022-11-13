@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "departamentos")
@@ -28,7 +29,5 @@ public class Marcas implements Serializable {
     @Column(name = "estado", nullable = false)
     private Boolean estado;
 
-    public Marcas(Long id) {
-        Id = id;
-    }
+
 }
