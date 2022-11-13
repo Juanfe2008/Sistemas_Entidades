@@ -15,7 +15,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class TiposVehiculos {
 
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
@@ -27,4 +27,8 @@ public class TiposVehiculos {
 
     @Column(name = "estado", nullable = false)
     private Boolean estado;
+
+    public TiposVehiculos(Long id) {
+        Id = id;
+    }
 }

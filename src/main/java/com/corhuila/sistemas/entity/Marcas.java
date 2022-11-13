@@ -28,4 +28,7 @@ public class Marcas implements Serializable {
     @Column(name = "estado", nullable = false)
     private Boolean estado;
 
+    public Marcas(Long id) {
+        Id = id;
+    }
 }
