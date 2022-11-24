@@ -3,17 +3,21 @@ package com.corhuila.sistemas.iservice;
 
 
 import com.corhuila.sistemas.entity.Usuarios;
+import com.corhuila.sistemas.model.Producto;
+import com.corhuila.sistemas.model.ResponseProducto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface IUsuariosService {
 
-	public List<Usuarios> all();
+	List<Usuarios> all();
 	
-	public Optional<Usuarios> findById(Long id);
+	Optional<Usuarios> findById(Long id);
 	
-	public Usuarios save(Usuarios usuarios);
+	Usuarios save(Usuarios usuarios);
 	
-	public void delete(Long id);
+	void delete(Long id);
+
+	ResponseProducto saveProducto(Producto producto);
 }

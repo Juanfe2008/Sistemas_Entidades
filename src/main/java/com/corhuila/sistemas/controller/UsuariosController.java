@@ -2,8 +2,11 @@ package com.corhuila.sistemas.controller;
 
 import com.corhuila.sistemas.entity.Usuarios;
 import com.corhuila.sistemas.iservice.IUsuariosService;
+import com.corhuila.sistemas.model.Producto;
+import com.corhuila.sistemas.model.ResponseProducto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -53,5 +56,10 @@ public class UsuariosController {
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
 		service.delete(id);
+	}
+
+	@PostMapping("save/producto")
+	public ResponseEntity<ResponseProducto> saveProducto(@RequestBody Producto producto){
+		return new ResponseEntity<>(service.saveProducto(producto),HttpStatus.OK);
 	}
 }
